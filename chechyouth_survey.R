@@ -18,8 +18,8 @@ library(reshape)
 library(RColorBrewer)
 library(psych)
 
-setwd("D:/peter/studium/subjects/Thesis/survey/analysis")
-source('D:/peter/studium/subjects/Thesis/survey/analysis/survey_397467_R_syntax_file.R')
+
+source(survey_397467_R_data_file.csv)
 
 ### CLEANING DATA
 data$org <- data$n_2
@@ -136,7 +136,9 @@ ggplot(data, aes(x = org, y = emb)) +
          geom_boxplot() +
          geom_jitter(aes(color = org)) +
   ylab("Adapted Emancipative Values") +
-  xlab("Sample Group")
+  xlab("") +
+  theme(legend.position = "none") 
+
 
 #DENSITY
 ggplot(data, aes(alpha = 1)) + 
@@ -221,7 +223,9 @@ ggplot(df.m, aes(x = org, y = value)) +
   geom_jitter(aes(color = org)) +
   facet_wrap(~ variable, ncol = 2) +
   ylab("Adapted Emancipative Values") +
-  xlab("Sample Group")
+  xlab("") +
+  theme(legend.position = "none") 
+
 
 
 #####
@@ -340,4 +344,5 @@ ggplot(data, aes(x = org, y = as.numeric(V163_demqual_SQ001))) +
   geom_boxplot() +
   geom_jitter(aes(color = org)) +
   xlab("") +
-  ylab("Satisfied with Democratic Quality")
+  ylab("Satisfied with democratic quality") +
+  theme(legend.position = "none") 
