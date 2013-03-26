@@ -1,5 +1,5 @@
 #$Rev: 10193 $ all.
-data <- read.csv("survey_397467_R_data_file.csv", quote = "'\"", na.strings=c("", "\"\""), stringsAsFactors=FALSE)
+data <- read.csv("https://github.com/nadererp/chechenyouth/blob/master/survey_397467_R_data_file.csv", quote = "'\"", na.strings=c("", "\"\""), stringsAsFactors=FALSE)
 
 # LimeSurvey Field type: F
 data[, 1] <- as.numeric(data[, 1])
